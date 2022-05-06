@@ -46,13 +46,11 @@ img{
 #menu {
 	margin-top:-50px;
 	margin-bottom:50px;
-	
 }
 .container{
 	min-width: 100%;
 }
 #imagem-apresentacao{
-
 	background-image:url("../img/woman-1807533_1920.jpg"); 	
 	height:100vh;
 	width:100%;	
@@ -62,7 +60,6 @@ img{
 	font-family:sans-serif;
 	padding-left:20px;
 	padding-top:50px;
-
 }
 #imagem-apresentacao section{
 		background-color:rgba(255,255,255,0.0);
@@ -226,3 +223,156 @@ img{
 	height: 50px;
 	border-radius:50%;
 }
+*{
+	margin:0;
+	padding:0;
+}
+#container-list button, #postar{
+	font-family: sans-serif;
+	font-size:1em;
+	background-color:white;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	width:10%;
+	height: 50px;
+	margin-left: 20px;
+}
+.d-flex{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+#container-list {
+	display:flex;
+	height: 10%;
+	width: 100%;
+	justify-content: center;
+	flex-direction:row-reverse;
+	align-items: center;
+	flex-wrap:wrap ;
+}
+body{
+	font-family:sans-serif;
+}
+form{
+	background-color:black;
+}
+a{
+	color:white;
+	text-decoration:none;
+	font-size:1.2em;
+	padding-bottom:40px;
+}
+textarea{
+	background-color:white;
+	width:90%;
+	height:300px;
+	margin-left:50px;
+	margin-bottom:20px;
+}
+#titulo{
+	background-color:white;
+	font-family:sans-serif;
+	width:90%;
+	margin-top:5%;
+	margin-left:4px;
+	margin-bottom:10px;
+}
+h4{
+	display:inline-block;
+	color:white;
+}
+h3{
+	font-family:sans-serif;
+	color: white;
+}
+.errorFadeIn{
+	font-weight:bold;
+	font-family: sans-serif;
+	color:tomato;
+	opacity:1;
+}
+.errorFadeOut{
+	font-weight:bold;
+	font-family: sans-serif;
+	color:tomato;
+	display:none;
+}
+.sucessoFadeIn{
+	font-weight:bold;
+	font-family: sans-serif;
+	color:green;
+	opacity:1;
+}
+.sucessoFadeOut{
+	font-weight:bold;
+	font-family: sans-serif;
+	color:green;
+	display:none;
+}
+.list{
+	color:white;
+	
+}
+.aumentaLista{
+	display:none;
+	transition: 0.5s;
+}
+.modal{
+	/*overflow: scroll;*/
+	width:100%;
+	height:900px;
+	position:fixed;
+	background-color:rgba(0,0,0,0.5);
+	opacity:0;
+	transition:0.5s;
+	z-index:-1;
+}
+.modal-fadeIn{
+	opacity:1;
+	z-index:1;
+	transition:0.5s;
+}
+.modal input{
+	background-color:white;
+	padding:5px;
+	margin-left:20px;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+#load{
+	background-image: linear-gradient(blue,lightblue,navy);
+	margin:auto;
+	width:50px;
+	height: 50px;
+	margin-bottom:20px;
+	border-radius:60%;
+	transition:0.5s;
+}
+.fadeIn{
+	display:none;
+}
+.loadAnime{
+	animation: load
+	0.5s linear infinite;
+	display:flex;
+}
+#filhoLoad{
+	background-color:black;
+	margin:auto;
+	margin-top:3px;
+	width:88%;
+	height: 88%;
+	margin-bottom:20px;
+	
+	border-radius:60%;
+} 
+
+ @keyframes load{
+	to{
+		transform:rotate(360deg);
+	}
+} 
