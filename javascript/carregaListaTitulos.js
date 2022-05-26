@@ -11,7 +11,7 @@ ajax.onreadystatechange =()=>{
             
                     if(ajax.status==200){
                    
-                        load.classList.add("loadAnime");
+                        load.classList.toggle("loadAnime");
                         setTimeout(()=>{
                       
                      

@@ -24,7 +24,7 @@
 				<input name="imagem" type="file" id="imagem">
 				<div class="container" id="container-list">
 					<button type="reset">Limpar</button>
-					<button  type="submit" id="btn-list" >lista</button>
+					<button id="btn-list" >lista</button>
 					<input id="postar" type="submit"value="Postar">                         
 				</div>
 			</form>
