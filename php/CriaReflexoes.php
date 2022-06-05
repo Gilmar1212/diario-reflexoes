@@ -23,4 +23,5 @@ $cod_img =$_POST["cod-img"];
             }, 100);
     </script>";
 } 
+include "editar.php";
 ?>

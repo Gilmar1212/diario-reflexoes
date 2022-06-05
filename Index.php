@@ -1,5 +1,7 @@
-<?php include "php/selectReflexoes.php"?>
+<div class="d-none"><?php include "php/selectReflexoes.php"?></div>
 <div class="d-none"><?php include "php/deleteReflexao.php"?></div>
+<?php include "php/editar.php"?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,14 +27,16 @@
 				<div class="container" id="container-list">
 					<button type="reset">Limpar</button>
 					<button id="btn-list" >lista</button>
+					<button id="edit" >Editar</button>
 					<input id="postar" type="submit"value="Postar">                         
 				</div>
 			</form>
 			<h3 >Lista:</h3>
+			<div id="load"><div id="filhoLoad"></div></div>
 			<ul class="list">
-				<div id="load"class="fadeIn"><div id="filhoLoad"></div></div>
 				<li name="list" id="listAdd">   
 					<br>            
+
 				</li>
 			</ul>
 		</div>  

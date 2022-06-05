@@ -303,6 +303,12 @@ h3{
 	color:tomato;
 	display:none;
 }
+.FadeOut{
+	font-weight:bold;
+	font-family: sans-serif;
+	color:tomato;
+	display:none !important;
+}
 .sucessoFadeIn{
 	font-weight:bold;
 	font-family: sans-serif;
@@ -317,7 +323,7 @@ h3{
 }
 .list{
 	color:white;
-	
+	display:none;
 }
 .aumentaLista{
 	display:none;
@@ -355,9 +361,10 @@ h3{
 	margin-bottom:20px;
 	border-radius:60%;
 	transition:0.5s;
+	display: none;
 }
 .fadeIn{
-	display:none;
+	display:block !important;
 }
 .loadAnime{
 	animation: load

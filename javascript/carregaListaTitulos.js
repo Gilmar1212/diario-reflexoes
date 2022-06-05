@@ -11,16 +11,24 @@ ajax.onreadystatechange =()=>{
             
                     if(ajax.status==200){
                    
-                        load.classList.toggle("loadAnime");
+                       
+                       load.classList.add("loadAnime");
+                            load.classList.add("fadeIn");
                         setTimeout(()=>{
-                      
+
+                           load.classList.remove("fadeIn");
+                          load.classList.add("fadeOut");
+                          titulo.classList.toggle("fadeIn");
+                           
+                     
                      
                       let checkbox = document.createElement("input");
                       checkbox.setAttribute("type","checkbox");
                       
                       var final = titulo.innerHTML=ajax.responseText;
+                     
                    },1000);
-                  
+                    
                     }
     }
     
