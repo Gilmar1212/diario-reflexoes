@@ -1,6 +1,5 @@
 <div class="d-none"><?php include "php/selectReflexoes.php"?></div>
 <div class="d-none"><?php include "php/deleteReflexao.php"?></div>
-<?php include "php/editar.php"?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,25 +11,36 @@
 </head>
 <body>
 	<div class="container">
+		
 		<div class="modal">
+			<div class="wrapper">
+			
+		
 			<form action="php/CriaReflexoes.php" method="POST" enctype="multipart/form-data">
 				<label for="titulo">
 					<h4 id="titulo-label">Titulo: </h4>
 				</label>
-				<input type="text" id="titulo" name="titulo"required>
+				<input type="text" id="titulo" name="titulo"required><br>
 				<label for="titulo">
 					<h4 id="titulo-label">Cód imagem: </h4>
 				</label>
-				<input type="text" class="cod-img" name="cod-img">
+				<input type="text" id="cod-img" name="cod-img">
+				<label for="titulo">
+					<h4 id="titulo-label">Cód imagem: </h4>
+				</label>
 				<textarea id="areaTexto" name="areaTexto" required></textarea>
 				<input name="imagem" type="file" id="imagem">
-				<div class="container" id="container-list">
-					<button type="reset">Limpar</button>
-					<button id="btn-list" >lista</button>
-					<button id="edit" >Editar</button>
-					<input id="postar" type="submit"value="Postar">                         
-				</div>
-			</form>
+				<button class="btn" type="reset">Limpar</button>
+					<button class="btn" id="btn-list" >lista</button>
+					<button class="btn" id="btn-list-delete" >Deletar</button>
+					<a class="btn" id="btn-list-edit" >Editar</a>
+
+					
+					
+					<input id="postar" class="btn text-center" type="submit"value="Postar">        
+			</form><br>
+			                 
+			
 			<h3 >Lista:</h3>
 			<div id="load"><div id="filhoLoad"></div></div>
 			<ul class="list">
@@ -39,6 +49,7 @@
 
 				</li>
 			</ul>
+			</div>
 		</div>  
 		<div id="cabecalho">
 			<fieldset>
@@ -68,6 +79,8 @@
 	<script type="module"src="javascript/trataErrorCampo.js"></script>
 	<script src="javascript/mostraModal.js"></script>
 	<script type="module" src="javascript/carregaListaTitulos.js"></script> 
+	<script type="module" src="javascript/carrega-edicao.js"></script> 
+	<script type="module" src="javascript/listar-delete.js"></script> 
 </body>
 </html>
 

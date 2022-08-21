@@ -1,5 +1,5 @@
-var btn= document.querySelector("#btn-list");
-var list =document.querySelector("#listAdd");
+var btn= document.querySelector("#btn-list-edit");
+var list =document.querySelector("#listAdd-edit");
 var titulo = document.querySelector(".list");
 var load =document.querySelector("#load");
 
@@ -21,7 +21,6 @@ ajax.onreadystatechange =()=>{
                           titulo.classList.toggle("fadeIn");
                            
                      
-                     
                       
                       var final = titulo.innerHTML=ajax.responseText;
                      
@@ -32,7 +31,7 @@ ajax.onreadystatechange =()=>{
     
 }
 
-ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/php/listar.php",true);
+ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/form-edit.php",true);
 ajax.send();
 
 

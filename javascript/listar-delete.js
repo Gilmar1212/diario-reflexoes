@@ -1,8 +1,8 @@
-var btn= document.querySelector("#btn-list");
-var list =document.querySelector("#listAdd");
+var btn= document.querySelector("#btn-list-delete");
+var list =document.querySelector("#listAdd-delete");
 var titulo = document.querySelector(".list");
 var load =document.querySelector("#load");
-
+var btndelete = document.querySelectorAll('.btn-delete');
 var ajax = new XMLHttpRequest();
 btn.addEventListener("click",()=>{
 ajax.onreadystatechange =()=>{  
@@ -31,8 +31,7 @@ ajax.onreadystatechange =()=>{
     }
     
 }
-
-ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/php/listar.php",true);
+ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/php/deleteReflexao.php",true);
 ajax.send();
 
 
