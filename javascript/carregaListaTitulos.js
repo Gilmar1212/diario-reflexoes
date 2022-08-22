@@ -1,40 +1,38 @@
 var btn= document.querySelector("#btn-list");
 var list =document.querySelector("#listAdd");
-var titulo = document.querySelector(".list");
+var conteudo = document.querySelector("#conteudo-principal");
 var load =document.querySelector("#load");
 
-var ajax = new XMLHttpRequest();
-btn.addEventListener("click",()=>{
+
+export default function result(){
+  var ajax = new XMLHttpRequest();
+
+  
+
+
 ajax.onreadystatechange =()=>{  
     if(ajax.readyState ==4 && ajax.status ==200){
         
             
                     if(ajax.status==200){
                    
-                       
-                       load.classList.add("loadAnime");
-                            load.classList.add("fadeIn");
-                        setTimeout(()=>{
-
-                           load.classList.remove("fadeIn");
-                          load.classList.add("fadeOut");
-                          titulo.classList.toggle("fadeIn");
-                           
+                     
                      
                      
                       
-                      var final = titulo.innerHTML=ajax.responseText;
+                      var final = conteudo.innerHTML=ajax.responseText;
                      
-                   },1000);
+                  
                     
                     }
     }
     
 }
 
-ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/php/listar.php",true);
+ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/php/selectReflexoes.php",true);
 ajax.send();
 
 
 
-});
+
+}

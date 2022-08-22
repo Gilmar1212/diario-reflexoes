@@ -6,7 +6,7 @@ include"connect.php";
 	
 
 ?>
-	<div class="border-bottom">
+	<div class="form-edit">
 			<strong>ID: <?=$registro['id'];?></strong><br>
 			<strong>Titulo: <?=$registro['titulo'];?></strong><br>	
 			<strong>Conteudo: <?=$registro['areaTexto'];?></strong>
@@ -18,9 +18,13 @@ include"connect.php";
 				<label for="titulo">
 					<h4 id="titulo-label">Cód imagem: </h4>
 				</label>
+				<input type="text" id="cod-img-update" name="cod-img-update">
+				<label for="titulo">
+					<h4 id="titulo-label">Carregue a imagem aqui: </h4>
+				</label>
+				<input name="imagem" type="file" id="imagem">
 				<textarea id="areaTexto" name="areaTexto-update" required></textarea>
-				<input type="text" id="cod-img" name="cod-img-update">
-				<input name="cod-img-update" type="file" id="imagem">
+				
 				<div class="container" id="container-list">
 					
 					<input id="postar" class="btn text-center" type="submit" value="Postar">                         

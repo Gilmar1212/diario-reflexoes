@@ -31,7 +31,7 @@ ajax.onreadystatechange =()=>{
     
 }
 
-ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/form-edit.php",true);
+ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/php/form-edit.php",true);
 ajax.send();
 
 

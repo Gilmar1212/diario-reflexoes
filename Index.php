@@ -1,4 +1,4 @@
-<div class="d-none"><?php include "php/selectReflexoes.php"?></div>
+<!-- <div class="d-none"><?php include "php/selectReflexoes.php"?></div> -->
 <div class="d-none"><?php include "php/deleteReflexao.php"?></div>
 
 <!DOCTYPE html>
@@ -29,9 +29,12 @@
 					<h4 id="titulo-label">Cód imagem: </h4>
 				</label>
 				<textarea id="areaTexto" name="areaTexto" required></textarea>
+				<label for="titulo">
+					<h4 id="titulo-label">Carregue a imagem aqui: </h4>
+				</label>
 				<input name="imagem" type="file" id="imagem">
 				<button class="btn" type="reset">Limpar</button>
-					<button class="btn" id="btn-list" >lista</button>
+					<!-- <button class="btn" id="btn-list" >lista</button> -->
 					<button class="btn" id="btn-list-delete" >Deletar</button>
 					<a class="btn" id="btn-list-edit" >Editar</a>
 
@@ -72,13 +75,16 @@
 			</section>
 		</div>
 		<main id="conteudo-principal">
-			<?php select();?>   
+			<script type="module">
+				import result from './javascript/carregaListaTitulos.js';
+				result();
+			</script> 
 		</main>
 	</div>
 	<script src=javascript/lancaMenuTop.js></script>
 	<script type="module"src="javascript/trataErrorCampo.js"></script>
 	<script src="javascript/mostraModal.js"></script>
-	<script type="module" src="javascript/carregaListaTitulos.js"></script> 
+	<!-- <script type="module" src="javascript/carregaListaTitulos.js"></script>  -->
 	<script type="module" src="javascript/carrega-edicao.js"></script> 
 	<script type="module" src="javascript/listar-delete.js"></script> 
 </body>

@@ -1,10 +1,12 @@
 *{
 	margin:auto;
 	padding:auto;
+	scroll-behavior: smooth;
 }
 body{
 	background-color:#000;
 	width: 100%;
+
 }
 img{
 	width:100%;
@@ -17,7 +19,7 @@ img{
 }
 .p-absolute{
 	position: absolute;
-	width: 80%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;top:0px;
@@ -38,6 +40,7 @@ img{
 }
 .p-reflex{
 	margin:20px 0;
+	padding: 0 44px;
 }
 #menu li{
 	display:inline-block;
@@ -95,6 +98,11 @@ fieldset {
 	margin-bottom:1em;
 	background-color:rgba(255,255,255,0.0);
 	color:white;
+	text-align: center;
+	padding:0 10px;
+}
+.reflexao p{
+	line-height: 10px;
 }
 #sobre-a-vida{
 	background-image: url("../img/girl-running-past-modern-architecture.jpg");
@@ -194,8 +202,10 @@ img{
 	padding:0;
 }
 .retorna-topo:hover{
-	opacity:0;
-	display:none;
+	background-color:lightgray;
+}
+.retorna-topo:hover a{
+	color:black !important;
 }
 .retorna-topo-fadeIn{
 	transition:0.5s;
@@ -394,8 +404,9 @@ h3{
 	cursor:
 	pointer;
 }
-.border-bottom{
+.form-edit{
 	border-bottom:solid 2px white;
+	padding:20px 0;
 }
 #load{
 	background-image: linear-gradient(blue,lightblue,navy);

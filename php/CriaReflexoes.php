@@ -20,6 +20,7 @@
  function criarPostagem(){
  $titulo = $_POST['titulo'];
 $cod_img =$_POST["cod-img"];
+ define("COD_IMG",$cod_img);
 $textArea = $_POST['areaTexto'];
  include_once("connect.php");
   $query = "INSERT INTO tbl_reflexoes(`titulo`,`imagens`,`areaTexto`)VALUES('".$titulo."','".$cod_img."','".$textArea."')";
@@ -35,7 +36,9 @@ $textArea = $_POST['areaTexto'];
             $select = mysqli_query($connect,"SELECT *FROM tbl_reflexoes");
     insereImagem();  
     if(move_uploaded_file($_FILES['imagem']['tmp_name'], "sql-images/".$_FILES['imagem']['name'])){
-        rename("sql-images/".$_FILES['imagem']['name'], "sql-images/".$cod_img.".jpg");
+      
+
+        rename("sql-images/".$_FILES['imagem']['name'], "sql-images/".COD_IMG.".jpg");
         mysqli_query($connect,$query)or die ("erro na requisição");
     }
        validaPostagem();

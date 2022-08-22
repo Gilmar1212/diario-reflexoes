@@ -2,9 +2,9 @@ var btn= document.querySelector("#btn-list-delete");
 var list =document.querySelector("#listAdd-delete");
 var titulo = document.querySelector(".list");
 var load =document.querySelector("#load");
-var btndelete = document.querySelectorAll('.btn-delete');
 var ajax = new XMLHttpRequest();
-btn.addEventListener("click",()=>{
+btn.addEventListener("click",(e)=>{
+  e.preventDefault();
 ajax.onreadystatechange =()=>{  
     if(ajax.readyState ==4 && ajax.status ==200){
         
