@@ -4,6 +4,7 @@ $user ="root";
 $pass ="";
 $db = "reflexoes";
 $connect = new mysqli($host,$user,$pass,$db);
+mysqli_set_charset($connect, "utf8");
 if($connect ->connect_errno){
     echo"falha ao conectar, erro numero :".mysqli_connect_errno();
 }

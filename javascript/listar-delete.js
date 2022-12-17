@@ -31,7 +31,11 @@ ajax.onreadystatechange =()=>{
     }
     
 }
-ajax.open("POST","http://localhost/projeto-diario-de-reflexoes/php/deleteReflexao.php",true);
+var urlCatch = window.location.href;
+var urlSplit = urlCatch.split("/");
+console.log();
+var url= urlSplit[3];
+ajax.open("POST","http://localhost/"+url+"/php/form-edit.php",true);
 ajax.send();
 
 

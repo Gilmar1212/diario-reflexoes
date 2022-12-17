@@ -1,4 +1,3 @@
-<!-- <div class="d-none"><?php include "php/selectReflexoes.php"?></div> -->
 <div class="d-none"><?php include "php/deleteReflexao.php"?></div>
 
 <!DOCTYPE html>

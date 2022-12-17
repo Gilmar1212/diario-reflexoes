@@ -1,6 +1,7 @@
 <?php
      function select(){
       include "connect.php";
+      mysqli_set_charset($connect, "utf8");
       $query = mysqli_query($connect,"SELECT * FROM tbl_reflexoes")or die("<br>problema na requisição");
       while($registro = mysqli_fetch_assoc($query)):
   
