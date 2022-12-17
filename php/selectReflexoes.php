@@ -7,7 +7,7 @@
   
         
 ?>
-     <div class="wrapper">
+     
      <div class='p-relative'>
       <div class='p-absolute-pelicula'>
       </div>
@@ -21,7 +21,7 @@
       </div>
       </div>
       </div>
-      </div>
+     
   <?php
   endwhile;
 }
