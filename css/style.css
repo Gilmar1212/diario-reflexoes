@@ -10,7 +10,20 @@ body{
 }
 img{
 	width:100%;
+	height:800px;
+	object-fit: cover;
+	object-position: center;
 }
+/* #cabecalho {
+	position: fixed;
+	width:100%;
+	height:100px;
+	z-index: 9;
+	
+}
+fieldset{
+	background-color:#000;
+} */
 .d-none{
 	display: none;
 }
@@ -60,18 +73,17 @@ img{
 .container{
 	min-width: 100%;
 }
-#imagem-apresentacao{
-	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/woman-1807533_1920.jpg"); 	
-	height:100vh;
-	width: 98%;	
-	background-size:100%;
-	background-repeat:
-	no-repeat;
-	margin-top:20px;
-	font-family:
-	sans-serif;
-	padding-left:20px;
-	padding-top:50px;
+#imagem-apresentacao {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/woman-1807533_1920.jpg");
+    height: 100vh;
+    width: 98%;
+    background-size: COVER;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    font-family: sans-serif;
+    padding-left: 20px;
+    padding-top: 50px;
 }
 #imagem-apresentacao section{
 		background-color:rgba(255,255,255,0.0);
@@ -85,7 +97,7 @@ fieldset {
 	background-color:rgba(255,255,255,0.0);
 	color:white;
 }
-#imagem-apresentacao h1{
+#imagem-apresentacao h2{
 	color:white;
 	font-size:3em;
 	text-align:center;
@@ -167,11 +179,6 @@ fieldset {
 }
 #sobre-necessidade-do-silencio .reflexao{
 	color:black;
-}
-img{
-	width:100%;
-	height:800px;
-	object-fit: initial;
 }
 .absolute {
 	position:relative;
@@ -276,6 +283,12 @@ img{
 	justify-content: center;
 
 }
+.flex-row{
+	flex-direction: row;
+}
+.flex-column{
+	flex-direction: column;
+}
 .align-items-center{
 	align-items: center;
 }
@@ -283,6 +296,12 @@ img{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+}
+.between{
+	justify-content: space-between;
+}
+.evenly{
+	justify-content: space-evenly;
 }
 #container-list {
 	display:flex;
@@ -317,10 +336,7 @@ textarea{
 #titulo{
 	background-color:white;
 	font-family:sans-serif;
-	width:90%;
-	margin-top:5%;
-	margin-left:4px;
-	margin-bottom:10px;
+	width:50%;
 }
 h4{
 	display:inline-block;
@@ -364,16 +380,21 @@ h3{
 	color:white;
 	display:none;
 	overflow-y: scroll;
-	height:199px;
+	height:300px;
 	width:100%;
+}
+.form-post{
+	margin:30px 0;
 }
 .aumentaLista{
 	display:none;
 	transition: 0.5s;
 }
 #cod-img{
-	margin:10px 0;
+	margin:10px 10px;
+	width:50%;
 }
+.text-center{text-align: center;}
 .modal{
 	/*overflow: scroll;*/
 	width:100%;
@@ -383,11 +404,10 @@ h3{
 	opacity:0;
 	transition:0.5s;
 	z-index:-1;
+	padding:40px 0;
 }
 #postar{
-	width: 100%;
 	padding:10px 0;
-	margin: 10px 0;
 }
 .modal-fadeIn{
 	opacity:1;
@@ -396,10 +416,7 @@ h3{
 	background-color: black;
 }
 .modal input{
-	background-color:
-	white;
 	padding:5px;
-	margin-left:20px;
 	border:
 	none;
 	border-radius:5px;
@@ -407,8 +424,8 @@ h3{
 	pointer;
 }
 .form-edit{
-	border-bottom:solid 2px white;
-	padding:20px 0;
+	border:solid 2px white;
+	padding:20px;
 }
 #load{
 	background-image: linear-gradient(blue,lightblue,navy);
@@ -424,6 +441,7 @@ h3{
 	display:
 	block !important;
 }
+.m-2{margin:10px 0;}
 .loadAnime{
 	animation: load
 	0.5s linear infinite;
@@ -442,6 +460,13 @@ h3{
 .btn:hover{
 	background-color:#e1dcdc;
 }
+.grid{
+	display:grid;
+}
+.grid-col-2{
+	grid-template-columns: repeat(2,1fr);
+}
+@media
  @keyframes load{
 	to{
 		transform:rotate(360deg);

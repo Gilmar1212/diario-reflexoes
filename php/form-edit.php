@@ -3,14 +3,12 @@
 include"connect.php";
 	$select = mysqli_query($connect,"SELECT *FROM tbl_reflexoes ORDER BY id") or die ("<br>problema na requisição");
 	while( $registro = mysqli_fetch_assoc($select)):
-	
-
 ?>
 	<div class="form-edit">
 			<strong>ID: <?=$registro['id'];?></strong><br>
 			<strong>Titulo: <?=$registro['titulo'];?></strong><br>	
 			<strong>Conteudo: <?=$registro['areaTexto'];?></strong>
-			<form action="php/editar.php?id=<?=$registro['id']?>" method="POST" enctype="multipart/form-data">
+			<form action="php/editar.php?id=<?=$registro['id']?>" method="POST" enctype="multipart/form-data" class="form-post">
 				<label for="titulo">
 					<h4 id="titulo-label">Titulo: </h4>
 				</label>
@@ -32,8 +30,6 @@ include"connect.php";
 			</form>
 			
 		</div><br>
-		
-		<script type="module" src="javascript/carregaListaTitulos.js"></script> 
 		<?php
 	endwhile;
 		?>

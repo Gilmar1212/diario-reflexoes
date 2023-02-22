@@ -1,4 +1,9 @@
-<div class="d-none"><?php include "php/deleteReflexao.php"?></div>
+<div class="d-none"><?php include "php/deleteReflexao.php";?></div>
+<?php 
+$spliter = explode("/",$_SERVER['SERVER_NAME']);
+$spliter2 = explode("/",$_SERVER['REQUEST_URI']);
+$url =$spliter[0]."/".$spliter2[1];
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,33 +21,36 @@
 			
 		
 			<form action="php/CriaReflexoes.php" method="POST" enctype="multipart/form-data">
-				<label for="titulo">
-					<h4 id="titulo-label">Titulo: </h4>
-				</label>
-				<input type="text" id="titulo" name="titulo"required><br>
-				<label for="titulo">
-					<h4 id="titulo-label">Cód imagem: </h4>
-				</label>
-				<input type="text" id="cod-img" name="cod-img">
-				<label for="titulo">
-					<h4 id="titulo-label">Cód imagem: </h4>
-				</label>
+				<div class="grid grid-col-2 container">
+					<div class="display-flex align-items-center">
+						<label for="titulo">
+							<h4 id="titulo-label"> Titulo: </h4>
+						</label>
+						<input type="text" id="titulo" name="titulo"required>
+					</div>
+					<div class="display-flex align-items-center">
+						<label for="titulo">
+							<h4 id="titulo-label">Cód imagem: </h4>
+						</label>
+						<input type="text" id="cod-img" name="cod-img">
+					</div>
+				</div>
 				<textarea id="areaTexto" name="areaTexto" required></textarea>
-				<label for="titulo">
-					<h4 id="titulo-label">Carregue a imagem aqui: </h4>
-				</label>
-				<input name="imagem" type="file" id="imagem">
-				<button class="btn" type="reset">Limpar</button>
-					<!-- <button class="btn" id="btn-list" >lista</button> -->
-					<button class="btn" id="btn-list-delete" >Deletar</button>
-					<a class="btn" id="btn-list-edit" >Editar</a>
-
-					
-					
-					<input id="postar" class="btn text-center" type="submit"value="Postar">        
+				<div class="display-flex evenly m-2 flex-direction-row">
+				<div class="display-flex flex-column">
+					<label for="titulo">
+						<h4 id="titulo-label">Carregue a imagem aqui: </h4>
+					</label><br>
+						<input name="imagem" type="file" id="imagem">
+				</div>
+					<div>
+						<button class="btn" type="reset">Limpar</button>
+							<button class="btn" id="btn-list-delete" >Deletar</button>
+							<a class="btn" id="btn-list-edit" >Editar</a>
+					</div>					
+				</div>
+				<div class="display-flex justify-content-center"><input id="postar" class="btn text-center" type="submit"value="Postar"></div>
 			</form><br>
-			                 
-			
 			<h3 >Lista:</h3>
 			<div id="load"><div id="filhoLoad"></div></div>
 			<ul class="list">
@@ -69,7 +77,7 @@
 		</div>
 		<div id="imagem-apresentacao">
 			<section>
-				<h1 >Reflexões</h1>
+				<h2>Reflexões</h2>
 				<p class="reflexao">Nesta seção irei escrever todas as minhas reflexões que tenho diariamente antes de dormir ou em qualquer parte de meu dia, irá abranger diversos tipos de assuntos e reflexões.</p>
 			</section>
 		</div>

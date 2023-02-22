@@ -35,7 +35,7 @@ var urlCatch = window.location.href;
 var urlSplit = urlCatch.split("/");
 console.log();
 var url= urlSplit[3];
-ajax.open("POST","http://localhost/"+url+"/php/form-edit.php",true);
+ajax.open("POST","http://localhost/"+url+"/php/deleteReflexao.php",true);
 ajax.send();
 
 

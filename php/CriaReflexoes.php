@@ -1,6 +1,4 @@
 <?php
-
-
  function validaPostagem(){
     echo "<script>
             alert('Postagem enviada com sucesso');
@@ -9,14 +7,17 @@
             }, 100);
     </script>";
  }
+
  function insereImagem(){
      
-    $path_dir = "C:\wamp64\www\projects\projeto-diario-de-reflexoes\php\sql-images";
+    $path_dir = "C:\wamp64\www\\$spliter[1]\\php\sql-images";
+    echo $path_dir;
     if(file_exists('sql-images')){
     }else{
         mkdir($path_dir);
     }  
  }
+
  function criarPostagem(){
  $titulo = $_POST['titulo'];
 $cod_img =$_POST["cod-img"];

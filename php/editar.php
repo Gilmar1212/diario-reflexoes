@@ -18,14 +18,11 @@ include"connect.php";
 	if($id){
 	
 		 if(move_uploaded_file($_FILES['imagem']['tmp_name'], "sql-images/".$_FILES['imagem']['name'])){
-      
 
         rename("sql-images/".$_FILES['imagem']['name'], "sql-images/".COD_IMG_UPDATE.".jpg");	
 
-    }
-			
-		}
-		
+    }	
+		}	
 		 mysqli_query($connect," UPDATE tbl_reflexoes SET titulo ='$titulo', areaTexto = '$textArea', imagens = '$cod_img_update' WHERE id=$id");
 		}else{
 			 echo "<script>
